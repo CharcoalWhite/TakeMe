@@ -1,0 +1,57 @@
+{
+	"schemaVersion": 1,
+	"id": "takeme",
+	"version": "${version}",
+	"name": "TakeMe",
+	"description": "Add the ability to hold or carry players.",
+	"authors": [
+		{
+			"name": "CharcoalWhite",
+			"contact": {
+				"homepage": "https://github.com/CharcoalWhite"
+			}
+		}
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GNU-GPL-3.0",
+	"icon": "assets/takeme/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.charcoalwhite.takeme.TakeMe"
+		],
+		"client": [
+			"org.charcoalwhite.takeme.TakeMeClient"
+		]
+	},
+	"mixins": [
+		"takeme.mixins.json",
+		{
+			"config": "takeme.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"candywrapper": ">=0.2.2"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_1297": [
+				"org/charcoalwhite/takeme/api/EntityApi"
+			],
+			"net/minecraft/class_1657": [
+				"org/charcoalwhite/takeme/api/PlayerEntityApi"
+			]
+		}
+	}
+}
