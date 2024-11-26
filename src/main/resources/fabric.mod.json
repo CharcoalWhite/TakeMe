@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "takeme",
+	"version": "${version}",
+	"name": "TakeMe",
+	"description": "Add the ability to carry players or be carried.",
+	"authors": [
+		{
+			"name": "CharcoalWhite",
+			"contact": {
+				"homepage": "https://github.com/CharcoalWhite"
+			}
+		}
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/TakeMe",
+		"sources": "https://github.com/CharcoalWhite/TakeMe"
+	},
+	"license": "GNU-GPL-3.0",
+	"icon": "assets/takeme/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.charcoalwhite.takeme.TakeMe"
+		]
+	},
+	"mixins": [
+		"takeme.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": [
+			"1.21.2",
+			"1.21.3"
+		],
+		"java": ">=21",
+		"fabric-api": "*",
+		"candywrapper": ">=0.2.6"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
