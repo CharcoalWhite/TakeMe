@@ -35,7 +35,7 @@
 		],
 		"java": ">=21",
 		"fabric-api": "*",
-		"candywrapper": ">=0.2.6"
+		"candywrapper": ">=0.2.7"
 	},
 	"suggests": {
 		"another-mod": "*"
